@@ -11,6 +11,9 @@ const Cast = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    setError(null);
+    setActors(null);
+
     fetchForCast(movieId)
       .then(data => setActors(data))
       .catch(error => setError(error));

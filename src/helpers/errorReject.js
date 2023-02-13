@@ -1,4 +1,2 @@
-export const errorFunction = () =>
-  Promise.reject(
-    new Error('Ой! Что то пошло не так. Попробуйте перезапустить страницу')
-  );
+export const errorFunction = error =>
+  Promise.reject(new Error(`${error} Попробуйте перезагрузить страницу`));

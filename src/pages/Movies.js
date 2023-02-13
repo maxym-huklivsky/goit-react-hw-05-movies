@@ -17,6 +17,9 @@ const Movies = () => {
       return;
     }
 
+    setError(null);
+    setMovies(null);
+
     fetchForSearch(search)
       .then(data => {
         setMovies(data);
@@ -61,7 +64,7 @@ const Movies = () => {
         <p>No movies were found for your request</p>
       )}
 
-      {!movies && <p>Enter name of your searching movie</p>}
+      {!movies && !error && <p>Enter name of your searching movie</p>}
 
       {error && <Error>{error.message}</Error>}
     </>

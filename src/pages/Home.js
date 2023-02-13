@@ -9,6 +9,9 @@ const Home = () => {
   const location = useLocation();
 
   useEffect(() => {
+    setError(null);
+    setTrends(null);
+
     fetchForTrend()
       .then(data => setTrends(data))
       .catch(error => setError(error));

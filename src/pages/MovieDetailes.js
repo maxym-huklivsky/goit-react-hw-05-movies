@@ -14,6 +14,9 @@ const MovieDetailes = () => {
   const backHref = useRef(location.state ?? '/movies');
 
   useEffect(() => {
+    setError(null);
+    setMovie(null);
+
     fetchForMovieDetailes(movieId)
       .then(data => setMovie(data))
       .catch(error => setError(error));

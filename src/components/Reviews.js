@@ -9,6 +9,9 @@ const Reviews = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    setError(null);
+    setReviews(null);
+
     fetchForReviews(movieId)
       .then(data => setReviews(data))
       .catch(error => setError(error));
