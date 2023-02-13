@@ -1,4 +1,11 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: #000;
+}
 
 body {
   margin: 0;
